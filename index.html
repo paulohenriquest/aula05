@@ -26,8 +26,8 @@
                 alert('O seu CPF é: ' + cpf.value +'.');
             }
         </script>
-
-        <h2>Exercicio 02</h2>
+        
+        
 
         <input type="number" name="numero1" id="numero1" class="numero1" value="0">
         <input type="number" name="numero2" id="numero2" class="numero2" value="0">
@@ -45,5 +45,31 @@
             }
         </script>
     </div>
+    <h2>Exercicio 2</h2>
+    <div class="form">
+        <h1>  Sistema de multas - Aula 06</h1>
+        <p>Velocidade do carro</p>
+        <input type="number" name="velocidade" id="velocidade"> <strong id="quilometros"></strong> KM/h </strong> 
+        <input type="submit" value="Verificar" onclick="calcular()">
+        <div id="vResultado"></div>
+        <script>
+            function calcular(){
+                let velocidade = document.getElementById('velocidade');
+                let vResultado = document.getElementById('vResultado');
+                let vel = Number(velocidade.value);
+                vResultado.innerHTML = ` Sua velocidade atual é de <strong>${vel} KM/h</strong>`;
+                // res.innerHTML = 'Sua velocidade atual é de <strong> ' + vel + 'KM/h <strong>';
+                if(vel > 50){
+                    // Acrescenta na div vResultado informando que ele está multado.
+                    vResultado.innerHTML += ` Você está <strong>MULTADO!</strong>`;
+                    //Emitir um alerta informando a velocidade.
+                // alert(` Você está MULTADO! Pois sua velocidade é ${vel} KM/h.`);
+                // alert('Você está MULTADO! Pois sua velocidade é ' + vel + 'KM/h.');
+                } else {
+                    vResultado.innerHTML += ` Parabéns, você não foi multado. `;
+                }
+            }
+        </script>
+        </div>
 </body>
 </html>

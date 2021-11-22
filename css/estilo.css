@@ -6,8 +6,11 @@
 }
 
 body {
-    /* text-align: center; */
     width: 100%;
+}
+
+h2, h3 {
+    text-align: center;
 }
 
 .form {
@@ -29,6 +32,8 @@ body {
 .form h1 {
     font-size: 18px;
 }
+
+
 
 .form input {
     border-radius: 10px;
