@@ -70,6 +70,16 @@
                 }
             }
         </script>
-        </div>
+        <h3>Exercicio 04</h3>
+        <p> Nome do candidato</p>
+        <input type="text" name="nome" id="nome">
+        <input type="submit" id="enviarN" onclick="enviarN()">
+            <script>
+                function enviarN(){ 
+                let name = document.getElementById('nome').value;
+                vResultado.innerHTML = ` Olá seu nome é: `;
+                alert(` Seu nome é: ${name}`);
+                }
+            </script>
 </body>
 </html>
